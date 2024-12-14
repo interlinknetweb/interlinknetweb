@@ -1,0 +1,386 @@
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background: url('OIP.jpeg') no-repeat center center/cover;
+    color: white;
+    padding: 40px 0;
+}
+
+span {
+    color: rgb(210, 228, 74);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+.header-content {
+    text-align: left;
+    padding: 20px;
+}
+
+.header-content h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header-content h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* About Section */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: rgb(212, 241, 241)
+}
+
+.about-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.about-info {
+    width: 100%;
+    padding: 20px;
+    background-color: #0c0e0f;
+    border-radius: 10px;
+    color: rgb(212, 241, 241);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Products Section */
+.products {
+    padding: 20px;
+}
+
+.products .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.product-card {
+    background-color: #1d1c1c;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #82d7b7;
+}
+
+.product-description {
+    font-size: 14px;
+    color: rgb(212, 241, 241);
+    margin-top: 10px;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.location-map iframe {
+    width: 100%;
+    height: 400px; /* Adjusted height */
+    border: 0;
+}
+
+.contact-info {
+    width: 45%;
+    background-color: #ebf2f6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.social-media-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-left,
+.social-media-right {
+    width: 48%;
+}
+
+.social-media-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns layout */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Footer Navigation */
+footer .footer-nav ul {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Footer Social Media */
+footer .footer-social ul {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Footer Subscription */
+footer .footer-subscribe form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-subscribe input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+
+footer .footer-subscribe button {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+footer .footer-subscribe button:hover {
+    background-color: #ff4500;
+}
+
+/* Footer Location */
+footer .footer-location {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+footer .footer-location address {
+    font-style: normal;
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .product-card {
+        width: 48%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    footer .footer-container {
+        grid-template-columns: 2fr 1fr; /* 2 columns layout on smaller screens */
+    }
+
+    footer .footer-nav,
+    footer .footer-social,
+    footer .footer-subscribe {
+        text-align: center; /* Center the text for mobile view */
+    }
+    .social-media-columns {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+    }
+
+    footer .footer-subscribe input {
+        width: 100%;
+    }
+}
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    transition: 0.3s;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    text-align: center;
+    padding: 8px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    padding: 12px 0;
+}
+
+.sidebar-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    color: #dff17a;
+    cursor: pointer;
+    z-index: 1100;
+    margin-bottom: 5px;
+}
+
+.sidebar-btn:focus {
+    outline: none;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    /* Hide desktop nav */
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Sidebar button visibility */
+    .sidebar-btn {
+        display: block;
+    }
+}
+
+/* Optional: Close sidebar when clicking anywhere on the background */
+.sidebar.open + .overlay {
+    display: block;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
